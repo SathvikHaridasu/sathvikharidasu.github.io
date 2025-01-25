@@ -115,6 +115,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  cursor: none;
 }
 
 /* Light mode styles */
@@ -1176,4 +1177,22 @@ img {
   .button--white {
     bottom: -4.5rem;
   }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+body:hover .custom-cursor {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.2);
 }

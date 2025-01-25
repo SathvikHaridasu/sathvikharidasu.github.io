@@ -14,6 +14,8 @@
   </head>
 
   <body oncontextmenu="return false">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Sathvik Haridasu</a>
@@ -519,5 +521,14 @@ Developed as part of a high school team project for the Neo Developer League, Ha
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
+    <script>
+      // Custom Cursor Script
+      const cursor = document.querySelector('.custom-cursor');
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+      });
+      document.body.style.cursor = 'none';
+    </script>
   </body>
 </html>
