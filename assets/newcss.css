@@ -1188,11 +1188,35 @@ img {
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
   z-index: 1000;
 }
 
 body:hover .custom-cursor {
   background-color: rgba(0, 0, 0, 0.1);
   transform: translate(-50%, -50%) scale(1.2);
+}
+
+body.dark-theme .custom-cursor {
+  border: 2px solid #fff;
+}
+
+body.dark-theme:hover .custom-cursor {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Unity Section */
+.unity__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.unity__container iframe {
+  border: none;
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
 }
