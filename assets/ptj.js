@@ -166,6 +166,10 @@ if (selectedTheme) {
   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
     iconTheme,
   );
+} else {
+  // Default to light mode
+  document.body.classList.remove(darkTheme);
+  themeButton.classList.remove(iconTheme);
 }
 
 // Activate / deactivate the theme manually with the button
